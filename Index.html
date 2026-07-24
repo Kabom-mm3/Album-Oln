@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Cute Album 📖</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="sparkles"></div>
+
+<div class="album">
+
+    <!-- Cover -->
+    <div class="page active">
+
+        <div class="cover">
+
+            <div class="cover-heart">🤍</div>
+
+            <h1>My Cute Album</h1>
+
+            <p>
+                Little moments,<br>
+                Beautiful memories ✨
+            </p>
+
+            <button id="startBtn">
+                Open Album 💕
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Photo Page -->
+    <div class="page">
+
+        <div class="photo-card">
+
+            <img id="albumImage" src="" alt="Photo">
+
+            <div class="caption">
+                <h2 id="photoTitle">
+                    Memory
+                </h2>
+
+                <p id="photoNumber">
+                    Photo 1
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Ending -->
+    <div class="page">
+
+        <div class="ending">
+
+            <h1>Thank You 🤍</h1>
+
+            <p>
+                Every picture tells a story.<br>
+                Thanks for viewing my album 🌸
+            </p>
+
+            <button id="restartBtn">
+                View Again
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="controls">
+
+    <button id="prevBtn">
+        ◀
+    </button>
+
+    <span id="pageIndicator">
+        Cover
+    </span>
+
+    <button id="nextBtn">
+        ▶
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
