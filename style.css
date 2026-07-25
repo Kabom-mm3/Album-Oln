@@ -404,3 +404,19 @@ justify-content:space-between;
 }
 
 }
+
+.cover-image{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:25px;
+    margin-bottom:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    border:6px solid white;
+}
+
+.cover h1{
+    margin-top:10px;
+}
