@@ -135,7 +135,7 @@ nextBtn.onclick = ()=>{
 
     if(page==1){
 
-        if(photoIndex<photos.length-1){
+        if(photoIndex<album.length-1){
 
             photoIndex++;
 
