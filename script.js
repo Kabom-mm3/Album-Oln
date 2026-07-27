@@ -16,7 +16,7 @@ const album = [
     {type:"video",file:"2.mp4"},
     {type:"image",file:"8.jpg"},
     {type:"image",file:"9.jpg"},
-    {type:"video",file:"3.mp4"},
+    {type:"video",file:"cc4cd507f3d14461ae690aa66093e65c.mp4"},
     {type:"image",file:"10.jpg"},
     {type:"image",file:"11.jpg"},
     {type:"image",file:"12.jpg"},
