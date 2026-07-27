@@ -55,22 +55,38 @@ function showPage(index){
 // LOAD PHOTO
 // =====================
 
+ const video=document.getElementById("albumVideo");
+const videoSource=document.getElementById("videoSource");
+
 function loadPhoto(){
 
-    img.src = "images/" + photos[photoIndex];
+    video.pause();
 
-    title.textContent = "Memory " + (photoIndex+1);
+    if(album[photoIndex].type==="image"){
 
-    number.textContent =
-    "Photo " +
-    (photoIndex+1) +
-    " / " +
-    photos.length;
+        img.style.display="block";
+        video.style.display="none";
 
-    indicator.textContent =
-    (photoIndex+1) +
-    " / " +
-    photos.length;
+        img.src="images/"+album[photoIndex].file;
+
+    }else{
+
+        img.style.display="none";
+        video.style.display="block";
+
+        videoSource.src="videos/"+album[photoIndex].file;
+
+        video.load();
+
+    }
+
+    title.textContent="Memory "+(photoIndex+1);
+
+    number.textContent=
+        (photoIndex+1)+" / "+album.length;
+
+    indicator.textContent=
+        (photoIndex+1)+" / "+album.length;
 
 }
 
