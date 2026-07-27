@@ -7,9 +7,20 @@ const album = [
 
     {type:"image",file:"1.jpg"},
     {type:"image",file:"2.jpg"},
-    {type:"video",file:"1.mp4"},
     {type:"image",file:"3.jpg"},
-    {type:"video",file:"2.mp4"}
+    {type:"image",file:"4.jpg"},
+    {type:"video",file:"1.mp4"},
+    {type:"image",file:"5.jpg"},
+    {type:"image",file:"6.jpg"},
+    {type:"image",file:"7.jpg"},
+    {type:"video",file:"2.mp4"},
+    {type:"image",file:"8.jpg"},
+    {type:"image",file:"9.jpg"},
+    {type:"video",file:"3.mp4"},
+    {type:"image",file:"10.jpg"},
+    {type:"image",file:"11.jpg"},
+    {type:"image",file:"12.jpg"},
+    {type:"video",file:"4.mp4"},
 
 ];
 
