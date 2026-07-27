@@ -9,7 +9,7 @@ const album = [
     {type:"image",file:"2.jpg"},
     {type:"image",file:"3.jpg"},
     {type:"image",file:"4.jpg"},
-    {type:"video",file:"1.mp4"},
+    {type:"video",file:"2879e433900f40d285f4e82fdde8b2d6.mp4"},
     {type:"image",file:"5.jpg"},
     {type:"image",file:"6.jpg"},
     {type:"image",file:"7.jpg"},
