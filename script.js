@@ -21,6 +21,7 @@ const album = [
     {type:"image",file:"11.jpg"},
     {type:"image",file:"12.jpg"},
     {type:"video",file:"4.mp4"},
+    {type:"image",file:"13.jpg"},
 
 ];
 
