@@ -361,33 +361,34 @@ setInterval(createSparkle,400);
 showPage(0);
 indicator.textContent="Cover";
 
-/* =========================   MUSIC CONTROL========================= */
-.music-control{    position:fixed;
-    top:20px;    right:20px;
-    display:flex;    align-items:center;    gap:10px;
-    background:rgba(255,255,255,.9);
-    padding:10px 15px;
-    border-radius:50px;
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
-    z-index:9999;
-    backdrop-filter:blur(10px);}
-#musicButton{    width:42px;    height:42px;
-    border:none;    border-radius:50%;
-    background:#ff8dc2;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
-    transition:.3s;}
-#musicButton:hover{    transform:scale(1.08);}
-#volumeSlider{    width:90px;
-    accent-color:#ff8dc2;
-    cursor:pointer;}
-#volumeText{    min-width:38px;
-    font-size:13px;
-    font-weight:700;
-    color:#ff6ca8;}
-@media(max-width:600px){
-    .music-control{        top:10px;        right:10px;
-        padding:7px 10px;    }
-    #musicButton{        width:38px;        height:38px;    }
-    #volumeSlider{        width:70px;    }}
+// =========================// BACKGROUND MUSIC// =========================
+const backgroundMusic =    document.getElementById("backgroundMusic");
+const musicButton =    document.getElementById("musicButton");
+const volumeSlider =    document.getElementById("volumeSlider");
+const volumeText =    document.getElementById("volumeText");
+
+// Starting volumebackgroundMusic.volume = 0.5;
+
+// =========================// PLAY / PAUSE// =========================
+musicButton.addEventListener("click", () => {
+    if(backgroundMusic.paused){
+        backgroundMusic.play()        .then(() => {
+            musicButton.textContent = "🔊";
+        })        .catch(() => {
+            console.log("Music could not be played.");
+        });
+    }else{
+        backgroundMusic.pause();
+        musicButton.textContent = "🎵";
+    }
+});
+
+// =========================// VOLUME// =========================
+volumeSlider.addEventListener("input", () => {
+    const volume =        Number(volumeSlider.value);
+    backgroundMusic.volume = volume;
+    volumeText.textContent =        Math.round(volume * 100) + "%";
+});
+
+// =========================// AUTOMATIC LOOP// =========================
+backgroundMusic.loop = true;
