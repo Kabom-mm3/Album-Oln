@@ -361,26 +361,3 @@ setInterval(createSparkle,400);
 showPage(0);
 indicator.textContent="Cover";
 
-// =========================// BACKGROUND MUSIC// =========================
-const backgroundMusic =    document.getElementById("backgroundMusic");
-const musicButton =    document.getElementById("musicButton");
-const volumeSlider =    document.getElementById("volumeSlider");
-const volumeText =    document.getElementById("volumeText");
-
-// Starting volumebackgroundMusic.volume = 0.5;
-
-// =========================// PLAY / PAUSE// =========================
-const backgroundMusic = document.getElementById("backgroundMusic");const musicButton = document.getElementById("musicButton");const volumeSlider = document.getElementById("volumeSlider");const volumeText = document.getElementById("volumeText");
-backgroundMusic.volume = 0.5;
-startBtn.addEventListener("click", () => {    backgroundMusic.play()        .then(() => {            musicButton.textContent = "🔊";        })        .catch(error => {            console.log("Music could not play:", error);        });});
-musicButton.addEventListener("click", () => {    if (backgroundMusic.paused) {        backgroundMusic.play();        musicButton.textContent = "🔊";    } else {        backgroundMusic.pause();        musicButton.textContent = "🔇";    }});
-volumeSlider.addEventListener("input", () => {    backgroundMusic.volume = volumeSlider.value;    volumeText.textContent =        Math.round(volumeSlider.value * 100) + "%";});
-// =========================// VOLUME// =========================
-volumeSlider.addEventListener("input", () => {
-    const volume =        Number(volumeSlider.value);
-    backgroundMusic.volume = volume;
-    volumeText.textContent =        Math.round(volume * 100) + "%";
-});
-
-// =========================// AUTOMATIC LOOP// =========================
-backgroundMusic.loop = true;
