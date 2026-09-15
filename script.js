@@ -361,3 +361,32 @@ setInterval(createSparkle,400);
 showPage(0);
 indicator.textContent="Cover";
 
+<script>
+  const audio = document.getElementById('myAudio');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const discWrapper = document.getElementById('discWrapper');
+
+  playPauseBtn.addEventListener('click', function() {
+    if (audio.paused) {
+      // Mainkan Lagu
+      audio.play();
+      playPauseBtn.textContent = '⏸ Pause';
+      // Aktifkan animasi berputar
+      discWrapper.classList.add('playing');
+    } else {
+      // Jeda Lagu
+      audio.pause();
+      playPauseBtn.textContent = '▶ Play';
+      // Hentikan animasi berputar
+      discWrapper.classList.remove('playing');
+    }
+  });
+
+  // Opsional: Jika lagu selesai otomatis, hentikan animasi & reset tombol
+  audio.addEventListener('ended', function() {
+    playPauseBtn.textContent = '▶ Play';
+    discWrapper.classList.remove('playing');
+  });
+</script>
+
+
