@@ -361,31 +361,3 @@ setInterval(createSparkle,400);
 showPage(0);
 indicator.textContent="Cover";
 
-<script>
-  const audio = document.getElementById('myAudio');
-  const playPauseBtn = document.getElementById('playPauseBtn');
-  const discWrapper = document.getElementById('discWrapper');
-
-  // Logika interaksi klik tombol
-  playPauseBtn.addEventListener('click', function() {
-    if (audio.paused) {
-      audio.play().then(() => {
-        playPauseBtn.textContent = '⏸ Pause';
-        discWrapper.classList.add('playing');
-      }).catch(error => {
-        console.log("Pemutaran audio gagal atau diblokir browser:", error);
-        alert("Gagal memutar lagu. Pastikan koneksi internet aktif dan klik ulang!");
-      });
-    } else {
-      audio.pause();
-      playPauseBtn.textContent = '▶ Play';
-      discWrapper.classList.remove('playing');
-    }
-  });
-
-  // Jika lagu selesai otomatis, reset animasi dan tombol
-  audio.addEventListener('ended', function() {
-    playPauseBtn.textContent = '▶ Play';
-    discWrapper.classList.remove('playing');
-  });
-</script>
